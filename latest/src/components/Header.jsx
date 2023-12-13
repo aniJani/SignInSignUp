@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
     return (
-        <div className='bg-emerald-700'>
-            <div className="flex justify-between items-center mx-auto p-3 mr-8 text-white">
+        <div className='bg-emerald-500'>
+            <div className="flex justify-between items-center mx-auto p-3 text-white">
                 <Link to='/'>
-                    <h1 className='font-bold'>DocNepal</h1>
+                    <h1 className='font-bold'>DrivNepal</h1>
                 </Link>
                 <ul className='flex gap-4'>
                     <Link to='/'>
