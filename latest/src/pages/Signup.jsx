@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Signup() {
     const [formData, setFormData] = useState({});
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.id]: e.target.value });
     }
@@ -30,6 +31,7 @@ export default function Signup() {
             setLoading(false);
             setError(true);
         }
+        navigate('/');
     };
     return (
         <div className='p-3 max-w-lg mx-auto'>
