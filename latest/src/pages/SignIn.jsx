@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import OAuth from '../components/OAuth';
 import { signInFailure, signInStart, signInSuccess } from '../redux/user/userSlice';
+import Header from '../components/Header';
 
 export default function Signin() {
     const [formData, setFormData] = useState({});
@@ -29,12 +30,14 @@ export default function Signin() {
                 return;
             }
             dispatch(signInSuccess(data));
-            navigate('/');
+            navigate('/user/homepage');
         } catch (error) {
             dispatch(signInFailure(error))
         }
     };
     return (
+    <div>
+        <Header />
         <div className='p-3 max-w-lg mx-auto'>
             <h1 className='text-3xl text-center font-semibold my-7 text-green-500'>Sign In</h1>
             <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
@@ -66,5 +69,6 @@ export default function Signin() {
             </div>
             <p className='text-red-600'>{error ? error.message || 'Something went wrong!' : ""}</p>
         </div>
+    </div>
     )
 }
