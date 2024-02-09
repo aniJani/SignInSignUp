@@ -32,12 +32,11 @@ export default function Signin() {
             dispatch(signInSuccess(data));
             navigate('/user/homepage');
         } catch (error) {
-            dispatch(signInFailure(error))
+            dispatch(signInFailure(error));
         }
     };
     return (
     <div>
-        <Header />
         <div className='p-3 max-w-lg mx-auto'>
             <h1 className='text-3xl text-center font-semibold my-7 text-green-500'>Sign In</h1>
             <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
