@@ -86,7 +86,7 @@ function Dashboard() {
                 className='w-32 h-12 rounded-xl font-bold hover:cursor-pointer bg-[#6ccff6]'
                 onClick={handleCreateButtonClick}
               >
-                Create Group
+                <a href = '/groups'>Create Group</a>
               </button>
               </div>
           </Modal>

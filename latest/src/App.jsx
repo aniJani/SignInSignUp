@@ -6,6 +6,7 @@ import Profile from './pages/Profile';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/Signup';
 import HomePage from './UserPages/HomePage';
+import Group from './UserPages/UserComponents/Group';
 
 export default function App() {
   return (
@@ -19,7 +20,7 @@ export default function App() {
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/user/homepage' element={<HomePage />} />
-        
+        <Route path='/groups' element={<Group />} />
       </Routes>
     </BrowserRouter>
   );
